@@ -2,13 +2,9 @@
 
 ## Introduction
 
-This document outlines the PCI DSS compliance measures implemented by our Payment Service Provider and the design of our Payment Gateway Service Application.
-
-## PCI DSS Compliance
-
 The Payment Card Industry Data Security Standard (PCI DSS) is a set of security standards designed to ensure that all companies that accept, process, store or transmit credit card information maintain a secure environment.
 
-### Goals
+## PCI DSS Compliance
 
 PCI DSS compliance is built around six goals. Here we outline how we meet each of these:
 
@@ -48,13 +44,37 @@ PCI DSS compliance is built around six goals. Here we outline how we meet each o
 
    - Requirement 12: Maintain a policy that addresses information security for all personnel
 
+## Key Points
+
+- **Understanding PCI Compliance:** PCI compliance is a regulation aimed at protecting consumer credit card information from theft and disclosure. It applies to any organization that stores, processes, or transmits credit card information.
+
+- **Compliance Levels:** PCI compliance levels (1 through 4) are dictated by the number of credit card transactions processed per year. Each level has different modules that need to be met.
+
+- **Compliance Modules:** For level one compliance, there are over twelve distinct modules that need to be met. These include segmenting your network, running quarterly or annual vulnerability scans, and restricting user access to certain information and applications.
+
+- **Compliance Requirements:** Within the 12 modules, there are over 220 specific individual items that need to be met. Compliance is not a one-time task but needs to be maintained over time as the organization, network, and business needs change.
+
+- **Qualified Security Assessor (QSA):** To meet compliance, you need to hire a QSA. They help you understand what you need to do to meet compliance and audit and assess that over time.
+
+- **Approved Scanning Vendor (ASV):** You also need to hire an ASV. They are certified by the PCI Council to scan your perimeter and any cardholder assets. They run a quarterly or annual scan depending on your organization.
+
+- **Vendor Interaction:** It's important to choose vendors who can interact with you, answer questions, and help solve problems as you strive to maintain compliance over time.
+
+- **Expertise:** Ensure your ASV and QSA have certified individuals who understand PCI compliance and can guide you through the process.
+
+- **Trust:** Avoid conflicts of interest by ensuring there's no overlap between the organization advising you on compliance and the one running your scans.
+
+- **Vulnerabilities:** Vulnerabilities are measured by CVSS scores. Any vulnerabilities above a 4 on the CVSS scale (which runs from 1 to 10) will fail you for compliance. Certain vulnerabilities, like those in the OWASP top ten, will fail you automatically regardless of score.
+
+- **Cost of Non-Compliance:** The cost of a breach can add up quickly, usually averaging $37 per record, with potentially thousands to millions of records per incident. These costs include detection of the breach, staff response, remediation costs, and fines.
+
 ## Payment Gateway Service Application Design
 
 Here we outline the key features and measures to meet the compliance:
 
 1. **Secure Transaction Processing**
 
-    - Data Encryption: Encrypt sensitive data such as credit card numbers and CVV codes during transmission. This can be done using SSL/TLS encryption.
+    - Encryption: Encrypt sensitive data such as credit card numbers and CVV codes during transmission. This can be done using SSL/TLS encryption.
 
     - Secure Sockets Layer (SSL): Implement SSL for all connections that involve sensitive data. This ensures that data transmitted between the server and the client is encrypted and secure.
 
