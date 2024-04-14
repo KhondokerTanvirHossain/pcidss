@@ -68,7 +68,7 @@ PCI DSS compliance is built around six goals. Here we outline how we meet each o
 
 - **Cost of Non-Compliance:** The cost of a breach can add up quickly, usually averaging $37 per record, with potentially thousands to millions of records per incident. These costs include detection of the breach, staff response, remediation costs, and fines.
 
-## Payment Gateway Service Application Design
+## How to Meet The Complience
 
 Here we outline the key features and measures to meet the compliance:
 
