@@ -1,10 +1,10 @@
-# Payment Service Provider - PCI DSS Compliance
+# PCI DSS Compliance
 
 ## Introduction
 
 The Payment Card Industry Data Security Standard (PCI DSS) is a set of security standards designed to ensure that all companies that accept, process, store or transmit credit card information maintain a secure environment.
 
-## PCI DSS Compliance
+## Requirements
 
 PCI DSS compliance is built around six goals. Here we outline how we meet each of these:
 
